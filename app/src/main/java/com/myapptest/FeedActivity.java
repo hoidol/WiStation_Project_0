@@ -132,6 +132,7 @@ public class FeedActivity extends AppCompatActivity {
 
         tabHost.addTab(ts2);
 
+
         //색변경하기
         TextView tv1 = (TextView)tabHost.getTabWidget().getChildAt(0).findViewById(android.R.id.title);
         tv1.setTextColor(Color.WHITE);

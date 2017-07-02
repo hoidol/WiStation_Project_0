@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <FrameLayout
+            android:id="@+id/Image_ViewPager_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_0">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/gradient_back"
+                    android:clickable="true"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/plus_icon" />
+            </RelativeLayout>
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/Main_Container_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Image_ViewPager_Layout"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/Main_etc_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/hurt_Image_Btn"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@android:color/background_light"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/hurt_icon" />
+
+                <TextView
+                    android:id="@+id/hurt_Count_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/hurt_Image_Btn"
+                    android:gravity="center_vertical"
+                    android:text="45"
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@+id/comment_Image_Btn"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/hurt_Count_Text"
+                    android:background="@android:color/background_light"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/coment_icon" />
+
+                <TextView
+                    android:id="@+id/comment_Count_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/comment_Image_Btn"
+                    android:gravity="center_vertical"
+                    android:text="12"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/Main_Content_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Main_etc_Layout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="The observatory is a popular tourist attraction with an excellent view of the Hollywood sign, and an extensive array of space and science-related displays.   \n\n\n Since the observatory opened in 1935, admission has been free..." />
+
+            <RelativeLayout
+                android:id="@+id/visiter_View_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Main_Content_Text"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/visiter_View_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Also visited by:"
+                    android:textColor="?attr/colorControlNormal"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/visiter_ImageView_Contaier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/visiter_View_Text"
+                        android:layout_marginTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face1_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face2_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face3_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face4_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face5_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face4_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face5_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face4_image" />
+
+                        <com.myapptest.RoundedImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/face5_image" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/visiter_Tag_Contaier"
+                    android:layout_below="@+id/visiter_ImageView_Contaier"
+                    android:layout_marginTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip1"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test1" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip2"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test2" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip3"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test3" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip4"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test4" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip5"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test5" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip6"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test6" />
+                        <com.robertlevonyan.views.chip.Chip
+                            android:id="@+id/chip7"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:chipText="test7" />
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

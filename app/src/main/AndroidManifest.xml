@@ -19,6 +19,7 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".FeedActivity"/>
         <activity android:name=".IntroActivity"/>
+        <activity android:name=".ViewActivity"/>
     </application>
 
 </manifest>
