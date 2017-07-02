@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerVertical="false"
+        android:theme="@style/Toolbar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/image_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/toolbar">
+
+        <com.myapptest.RoundedImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@mipmap/card_item_1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_Inf_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/create_Account_Btn"
+        android:layout_below="@+id/image_Layout"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/user_ID_Text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/user_inf_back"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp" />
+
+        <EditText
+            android:id="@+id/user_Password_Text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/user_ID_Text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/user_inf_back"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp" />
+
+
+        <Button
+            android:id="@+id/user_Login_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_above="@+id/user_Forget_Inf_Btn"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/gradient_back"
+            android:text="Sign In" />
+
+        <Button
+            android:id="@+id/user_Forget_Inf_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/no_border_button_back"
+            android:text="Forget your details?"
+            android:textColor="@color/cardview_shadow_start_color"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/create_Account_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/no_border_button_back"
+        android:text="Create a new account"
+        android:textSize="12sp" />
+
+</RelativeLayout>

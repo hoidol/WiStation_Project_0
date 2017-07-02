@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#ffffff</item> <!-- State Bar 색상 변경 -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowLightStatusBar">true</item>  State Bar 아이콘 색상 변경 -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+    </style>
+
+
+    <style name="Toolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+</resources>
+
